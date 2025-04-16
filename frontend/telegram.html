@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Launch Bot</title>
+  <link rel="stylesheet" href="telegram.css">
+</head>
+<body>
+  <h1>Token Launch Bot</h1>
+
+  <!-- Chain Selection -->
+  <select id="chainSelect">
+    <option value="hardhat">Hardhat (Local)</option>
+    <option value="sepolia">Sepolia Testnet</option>
+    <option value="bscTestnet">BSC Testnet</option>
+  </select>
+
+  <!-- Token Creation -->
+  <div>
+    <input id="tokenName" type="text" placeholder="Token Name">
+    <input id="tokenSymbol" type="text" placeholder="Symbol">
+    <input id="tokenSupply" type="number" placeholder="Supply">
+    <button onclick="createToken()">Create Token</button>
+    <p id="tokenOutput"></p>
+  </div>
+
+  <!-- Add Liquidity -->
+  <div>
+    <input id="liquidityToken" type="text" placeholder="Token Address">
+    <input id="tokenAmount" type="number" placeholder="Tokens">
+    <input id="ethAmount" type="number" placeholder="ETH">
+    <button onclick="addLiquidity()">Add Liquidity</button>
+    <p id="liquidityOutput"></p>
+  </div>
+
+  <!-- Wallet Management -->
+  <div>
+    <button onclick="generateWallet()">New Wallet</button>
+    <button onclick="distributeTokens()">Distribute</button>
+    <p id="walletOutput"></p>
+  </div>
+
+  <!-- Trade Simulation -->
+  <div>
+    <input id="tradeEth" type="number" placeholder="ETH to Swap">
+    <input id="tradeToken" type="text" placeholder="Token Address">
+    <button onclick="simulateTrade()">Buy Tokens</button>
+    <p id="tradeOutput"></p>
+  </div>
+
+  <!-- Verification -->
+  <div>
+    <input id="verifyToken" type="text" placeholder="Token Address">
+    <button onclick="verifyLaunch()">Verify</button>
+    <p id="verifyOutput"></p>
+  </div>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js"></script>
+  <script src="telegram.js"></script>
+</body>
+</html>

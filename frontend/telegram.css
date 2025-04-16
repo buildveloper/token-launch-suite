@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: #f0f8ff;
+  }
+  
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    color: #2f80ed;
+  }
+  
+  div {
+    margin: 10px 0;
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+  }
+  
+  select, input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2f80ed;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2563eb;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #333;
+  }

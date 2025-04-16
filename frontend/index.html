@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <title>Token Launch Suite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Token Launch Suite</h1>
+
+  <!-- Chain Selection -->
+  <section>
+    <h2>Select Blockchain</h2>
+    <select id="chainSelect">
+      <option value="hardhat">Hardhat (Local)</option>
+      <option value="sepolia">Sepolia Testnet</option>
+      <option value="bscTestnet">BSC Testnet</option>
+    </select>
+  </section>
+
+  <!-- Token Creation -->
+  <section>
+    <h2>Create Token</h2>
+    <input id="tokenName" type="text" placeholder="Token Name">
+    <input id="tokenSymbol" type="text" placeholder="Symbol">
+    <input id="tokenSupply" type="number" placeholder="Initial Supply">
+    <button onclick="createToken()">Deploy Token</button>
+    <p id="tokenOutput"></p>
+  </section>
+
+  <!-- Add Liquidity -->
+  <section>
+    <h2>Add Liquidity</h2>
+    <input id="liquidityToken" type="text" placeholder="Token Address">
+    <input id="tokenAmount" type="number" placeholder="Token Amount">
+    <input id="ethAmount" type="number" placeholder="ETH Amount">
+    <button onclick="addLiquidity()">Add Liquidity</button>
+    <p id="liquidityOutput"></p>
+  </section>
+
+  <!-- Wallet Management -->
+  <section>
+    <h2>Wallet Management</h2>
+    <button onclick="generateWallet()">Generate Wallet</button>
+    <button onclick="distributeTokens()">Distribute Tokens</button>
+    <p id="walletOutput"></p>
+  </section>
+
+  <!-- Trade Simulation -->
+  <section>
+    <h2>Simulate Trade</h2>
+    <input id="tradeEth" type="number" placeholder="ETH to Swap">
+    <input id="tradeToken" type="text" placeholder="Token Address">
+    <button onclick="simulateTrade()">Buy Tokens</button>
+    <p id="tradeOutput"></p>
+  </section>
+
+  <!-- Verification -->
+  <section>
+    <h2>Verify Launch</h2>
+    <input id="verifyToken" type="text" placeholder="Token Address">
+    <button onclick="verifyLaunch()">Verify</button>
+    <p id="verifyOutput"></p>
+  </section>
+
+  <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
