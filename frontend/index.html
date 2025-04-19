@@ -26,6 +26,9 @@
     <input id="tokenName" type="text" placeholder="Token Name">
     <input id="tokenSymbol" type="text" placeholder="Symbol">
     <input id="tokenSupply" type="number" placeholder="Initial Supply">
+    <input id="taxRate" type="number" placeholder="Tax Rate (basis points, e.g., 100 = 1%)">
+    <input id="maxWallet" type="number" placeholder="Max Wallet (tokens)">
+    <input id="maxTx" type="number" placeholder="Max Transaction (tokens)">
     <button onclick="createToken()">Deploy Token</button>
     <p id="tokenOutput"></p>
   </section>
@@ -65,7 +68,7 @@
     <p id="verifyOutput"></p>
   </section>
 
-  <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
   <script src="scripts.js"></script>
 </body>
 </html>
